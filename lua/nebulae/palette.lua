@@ -1,6 +1,7 @@
 local M = {}
 
 M.colors = {
+	none   = 'NONE',
 	gray   = '#b2b2b2',
 	blue   = '#81a1c1',
 	brown  = '#BC8F8F',
@@ -14,6 +15,7 @@ M.colors = {
 	black30 = '#3b4252',
 	black40 = '#434c5e',
 	black50 = '#4c566a',
+	black60 = '#667084',
 
 	white10 = '#d8dee9',
 	white20 = '#e5e9f0',
