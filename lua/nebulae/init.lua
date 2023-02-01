@@ -8,14 +8,27 @@ vim.cmd('set t_Co=256')
 local c = palette.colors
 
 local function hi(group, format)
-	local guibg    = format.bg    or 'NONE'
-	local guifg    = format.fg    or 'NONE'
-	local guistyle = format.style or 'NONE'
+	if not format.bg then
+		format.bg = c.none
+	end
+
+	if not format.fg then
+		format.fg = c.none
+	end
+
+	local guibg    = format.bg.gui
+	local ctermbg  = format.bg.cterm
+	local guifg    = format.fg.gui
+	local ctermfg  = format.fg.cterm
+	local style    = format.style or 'NONE'
 
 	local style = "hi " .. group
 	.. ' guibg=' .. guibg
 	.. ' guifg=' .. guifg
-	.. ' gui='   .. guistyle
+	.. ' gui='   .. style
+	.. ' ctermbg=' .. ctermbg
+	.. ' ctermfg=' .. ctermfg
+	.. ' cterm='   .. style
 
 	vim.cmd(style)
 end
