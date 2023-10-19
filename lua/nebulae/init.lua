@@ -36,7 +36,7 @@ end
 -- UI
 hi('Normal', {bg = c.black20, fg = c.white10})
 hi('NonText', {bg = c.black20, fg = c.white10})
-hi('Visual', {bg = c.black10})
+hi('Visual', {bg = c.black50, fg = c.white10})
 hi('Cursor', {bg = c.white10, fg = c.black30})
 hi('CursorLine', {bg = c.black10})
 hi('CursorColumn', {bg = c.black10})
