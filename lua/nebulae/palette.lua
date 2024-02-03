@@ -26,4 +26,15 @@ M.colors = {
 	white30 = {gui = '#eceff4', cterm = '255'},
 }
 
+M.termcolors = {
+    black = { normal = M.colors.black10.gui, bright = M.colors.black30.gui },
+    red = { normal = M.colors.red.gui, bright = '#d08770' },
+    green = { normal = M.colors.green.gui, bright = '#62bc62' },
+    yellow = { normal = '#fff59d', bright = '#fceb55' },
+    blue = { normal = M.colors.blue.gui, bright = '#4888c9' },
+    magenta = { normal = '#e1bee7', bright = '#da81ea' },
+    cyan = { normal = '#80deea', bright = '#35d3e8' },
+    white = { normal = M.colors.white30.gui, bright = M.colors.white10.gui },
+}
+
 return M

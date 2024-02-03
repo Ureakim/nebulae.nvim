@@ -6,6 +6,7 @@ vim.cmd('highlight clear')
 vim.cmd('set t_Co=256')
 
 local c = palette.colors
+local t = palette.termcolors
 
 local function hi(group, format)
 	if not format.bg then
@@ -22,7 +23,7 @@ local function hi(group, format)
 	local ctermfg  = format.fg.cterm
 	local style    = format.style or 'NONE'
 
-	local style = "hi " .. group
+	local s = "hi " .. group
 	.. ' guibg=' .. guibg
 	.. ' guifg=' .. guifg
 	.. ' gui='   .. style
@@ -30,7 +31,7 @@ local function hi(group, format)
 	.. ' ctermfg=' .. ctermfg
 	.. ' cterm='   .. style
 
-	vim.cmd(style)
+	vim.cmd(s)
 end
 
 -- UI
@@ -98,3 +99,22 @@ hi('DiffAdd', {fg = c.green})
 hi('DiffDelete', {fg = c.red})
 hi('DiffChange', {fg = c.beige})
 hi('DiffText', {bg = c.orange, fg = c.black10})
+
+-- Terminal
+vim.g.terminal_color_0 = t.black.normal
+vim.g.terminal_color_1 = t.red.normal
+vim.g.terminal_color_2 = t.green.normal
+vim.g.terminal_color_3 = t.yellow.normal
+vim.g.terminal_color_4 = t.blue.normal
+vim.g.terminal_color_5 = t.magenta.normal
+vim.g.terminal_color_6 = t.cyan.normal
+vim.g.terminal_color_7 = t.white.normal
+vim.g.terminal_color_8 = t.black.bright
+vim.g.terminal_color_9 = t.red.bright
+vim.g.terminal_color_10 = t.green.bright
+vim.g.terminal_color_11 = t.yellow.bright
+vim.g.terminal_color_12 = t.blue.bright
+vim.g.terminal_color_13 = t.magenta.bright
+vim.g.terminal_color_14 = t.cyan.bright
+vim.g.terminal_color_15 = t.white.bright
+
