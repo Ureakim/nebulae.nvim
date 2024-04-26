@@ -66,8 +66,8 @@ hi('Error', { fg = c.red, style = 'underline' })
 
 -- Comments
 hi('Comment', { fg = c.gray, style = 'italic' })
-hi('Whitespace', { fg = c.gray, style = 'NONE' })
-hi('NonText', { fg = c.gray, style = 'NONE' })
+hi('Whitespace', { fg = c.black60, style = 'NONE' })
+hi('NonText', { fg = c.black60, style = 'NONE' })
 
 -- Keywords
 hi('Conditional', { fg = c.beige })
