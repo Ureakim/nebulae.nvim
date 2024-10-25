@@ -118,3 +118,35 @@ vim.g.terminal_color_12 = t.blue.bright
 vim.g.terminal_color_13 = t.magenta.bright
 vim.g.terminal_color_14 = t.cyan.bright
 vim.g.terminal_color_15 = t.white.bright
+
+-- CMP
+hi('CmpItemAbbrDeprecated', { bg = c.orange, fg = c.black10 })
+hi('CmpItemAbbrMatch', { bg = c.black50, fg = c.white10 })
+hi('CmpItemAbbrMatchFuzzy', { bg = c.black50, fg = c.white10 })
+hi('CmpItemMenu', { fg = c.black60 })
+
+hi('CmpItemKindKeyword', { bg = c.beige, fg = c.black10 })
+hi('CmpItemKindVariable', { bg = c.beige, fg = c.black10 })
+hi('CmpItemKindOperator', { bg = c.beige, fg = c.black10 })
+hi('CmpItemKindModule', { bg = c.beige, fg = c.black10 })
+hi('CmpItemKindEnumMember', { bg = c.beige, fg = c.black10 })
+
+hi('CmpItemKindClass', { bg = c.blue, fg = c.black10 })
+hi('CmpItemKindStruct', { bg = c.blue, fg = c.black10 })
+hi('CmpItemKindInterface', { bg = c.blue, fg = c.black10 })
+hi('CmpItemKindEnum', { bg = c.blue, fg = c.black10 })
+
+hi('CmpItemKindFunction', { bg = c.brown, fg = c.black10 })
+hi('CmpItemKindMethod', { bg = c.brown, fg = c.black10 })
+hi('CmpItemKindConstructor', { bg = c.brown, fg = c.black10 })
+hi('CmpItemKindReference', { bg = c.brown, fg = c.black10 })
+
+hi('CmpItemKindProperty', { bg = c.green, fg = c.black10 })
+hi('CmpItemKindField', { bg = c.green, fg = c.black10 })
+hi('CmpItemKindEvent', { bg = c.green, fg = c.black10 })
+hi('CmpItemKindConstant', { bg = c.green, fg = c.black10 })
+hi('CmpItemKindValue', { bg = c.green, fg = c.black10 })
+
+hi('CmpItemKindText', { bg = c.white30, fg = c.black10 })
+hi('CmpItemKindUnit', { bg = c.white30, fg = c.black10 })
+
