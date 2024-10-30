@@ -2,17 +2,17 @@ local M = {}
 
 --[[
 -- 256 Colors cheat sheet
--- https://jonasjacek.github.io/colors/
 --]]
 M.colors = {
-    none    = { gui = 'NONE', cterm = 'NONE' },
-    gray    = { gui = '#b2b2b2', cterm = '249' },
-    blue    = { gui = '#81a1c1', cterm = '111' },
-    brown   = { gui = '#BC8F8F', cterm = '136' },
-    beige   = { gui = '#D2B48C', cterm = '180' },
-    green   = { gui = '#8FBC8F', cterm = '113' },
-    orange  = { gui = '#d08770', cterm = '172' },
-    red     = { gui = '#bf616a', cterm = '196' },
+    none = { gui = 'NONE', cterm = 'NONE' },
+
+    gray    = { gui = '#3b4252', cterm = '237' },
+    blue    = { gui = '#81a1c1', cterm = '110' },
+    cyan    = { gui = '#88c0d0', cterm = '73' },
+    magenta = { gui = '#b48ead', cterm = '139' },
+    green   = { gui = '#a3be8c', cterm = '108' },
+    yellow   = { gui = '#d2b48c', cterm = '180' },
+    red     = { gui = '#bf616a', cterm = '168' },
 
     black10 = { gui = '#191C24', cterm = '233' },
     black20 = { gui = '#2e3440', cterm = '235' },
@@ -27,14 +27,15 @@ M.colors = {
 }
 
 M.termcolors = {
-    black = { normal = M.colors.black10.gui, bright = M.colors.black30.gui },
-    red = { normal = M.colors.red.gui, bright = '#d08770' },
-    green = { normal = M.colors.green.gui, bright = '#62bc62' },
-    yellow = { normal = '#fff59d', bright = '#fceb55' },
-    blue = { normal = M.colors.blue.gui, bright = '#4888c9' },
-    magenta = { normal = '#e1bee7', bright = '#da81ea' },
-    cyan = { normal = '#80deea', bright = '#35d3e8' },
-    white = { normal = M.colors.white30.gui, bright = M.colors.white10.gui },
+    black = { normal = M.colors.gray.gui, bright = '#4c566a' },
+    red = { normal = M.colors.red.gui, bright = '#d06f79' },
+    green = { normal = M.colors.green.gui, bright = '#b3cf9d' },
+    yellow = { normal = M.colors.yellow.gui, bright = '#e0c4a8' },
+    blue = { normal = M.colors.blue.gui, bright = '#8fadc8' },
+    magenta = { normal = M.colors.magenta.gui, bright = '#c895b5' },
+    cyan = { normal = M.colors.cyan.gui, bright = '#9fceda' },
+    white = { normal = '#e5e9f0', bright = '#edeff4' },
 }
 
 return M
+
