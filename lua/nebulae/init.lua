@@ -36,6 +36,7 @@ end
 
 -- UI
 hi('Normal', { bg = c.black20, fg = c.white10 })
+hi('NormalFloat', { bg = c.black10, fg = c.white10 })
 hi('Visual', { bg = c.black50, fg = c.white10 })
 hi('Cursor', { bg = c.white10, fg = c.black30 })
 hi('CursorLine', { bg = c.black10 })
@@ -119,6 +120,33 @@ vim.g.terminal_color_13 = t.magenta.bright
 vim.g.terminal_color_14 = t.cyan.bright
 vim.g.terminal_color_15 = t.white.bright
 
+--
+-- mini.nvim
+--
+-- mini.files
+hi('MiniFilesBorder', { bg = c.black10, fg = c.white10 })
+hi('MiniFilesBorderModified', { bg = c.black10, fg = c.red })
+hi('MiniFilesCursorLine', { bg = c.black40, fg = c.white10 })
+hi('MiniFilesDirectory', { bg = c.black10, fg = c.blue })
+hi('MiniFilesFile', { bg = c.black10, fg = c.white10 })
+hi('MiniFilesNormal', { bg = c.black10, fg = c.white10 })
+hi('MiniFilesTitle', { bg = c.black10, fg = c.green })
+-- mini.pick
+hi('MiniPickBorder', { bg = c.black10, fg = c.white10 })
+hi('MiniPickBorderBusy', { bg = c.black10, fg = c.red })
+hi('MiniPickBorderText', { bg = c.black10, fg = c.white10 })
+hi('MiniPickCursor', { bg = c.white10, fg = c.black30 })
+hi('MiniPickIconDirectory', { bg = c.black10, fg = c.white10 })
+hi('MiniPickIconFile', { bg = c.black10, fg = c.white10 })
+hi('MiniPickHeader', { bg = c.black10, fg = c.green })
+hi('MiniPickMatchCurrent', { bg = c.black40, fg = c.white10 })
+hi('MiniPickMatchMarked', { bg = c.black10, fg = c.green })
+hi('MiniPickMatchRanges', { bg = c.black10, fg = c.green })
+hi('MiniPickNormal', { bg = c.black10, fg = c.white10 })
+hi('MiniPickPreviewLine', { bg = c.black10, fg = c.white10 })
+hi('MiniPickPreviewRegion', { bg = c.black10, fg = c.white10 })
+hi('MiniPickPrompt', { bg = c.black10, fg = c.white10 })
+
 -- CMP
 hi('CmpItemAbbrDeprecated', { fg = c.yellow })
 hi('CmpItemAbbrMatch', { bg = c.black50, fg = c.white10 })
@@ -149,4 +177,3 @@ hi('CmpItemKindValue', { fg = c.magenta })
 
 hi('CmpItemKindText', { fg = c.white30 })
 hi('CmpItemKindUnit', { fg = c.white30 })
-
