@@ -16,7 +16,7 @@ M.dark = {
 
     bg10    = { gui = '#191C24', cterm = '233' },
     bg20    = { gui = '#2e3440', cterm = '235' },
-    bg30    = { gui = '#3b4252', cterm = '237' },
+    bg30    = { gui = '#434c5e', cterm = '237' },
 
     fg10    = { gui = '#eceff4', cterm = '255' },
     fg20    = { gui = '#e5e9f0', cterm = '254' },
@@ -38,9 +38,9 @@ M.light = {
     bg20    = { gui = '#e0e0e0', cterm = '254' },
     bg30    = { gui = '#d3d3d3', cterm = '253' },
 
-    fg30    = { gui = '#191C24', cterm = '233' },
+    fg10    = { gui = '#434c5e', cterm = '237' },
     fg20    = { gui = '#2e3440', cterm = '235' },
-    fg10    = { gui = '#3b4252', cterm = '237' },
+    fg30    = { gui = '#191C24', cterm = '233' },
 }
 
 

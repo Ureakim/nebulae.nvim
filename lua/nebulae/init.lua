@@ -33,7 +33,7 @@ local function setHighlights()
     -- UI
     hi('Normal', { bg = c.bg20, fg = c.fg10 })
     hi('NormalFloat', { bg = c.bg10, fg = c.fg10 })
-    hi('Visual', { bg = c.bg20, fg = c.fg10 })
+    hi('Visual', { bg = c.bg30})
     hi('Cursor', { bg = c.fg10, fg = c.bg20 })
     hi('CursorLine', { bg = c.bg30 })
     hi('CursorColumn', { bg = c.bg30 })
