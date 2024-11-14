@@ -1,1 +1,4 @@
-lua require 'nebulae'
+lua << EOF
+local nebulae = require('nebulae')
+nebulae.setup()
+EOF

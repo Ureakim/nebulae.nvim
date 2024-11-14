@@ -6,7 +6,7 @@ local M = {}
 M.dark = {
     none    = { gui = 'NONE', cterm = 'NONE' },
 
-    gray    = { gui = '#616161', cterm = '237' },
+    gray    = { gui = '#757575', cterm = '237' },
     blue    = { gui = '#81a1c1', cterm = '110' },
     cyan    = { gui = '#88c0d0', cterm = '73' },
     magenta = { gui = '#b48ead', cterm = '139' },
@@ -26,34 +26,33 @@ M.dark = {
 M.light = {
     none    = { gui = 'NONE', cterm = 'NONE' },
 
-    gray    = { gui = '#acacac', cterm = '252' },
-    blue    = { gui = '#5b728e', cterm = '67' },
-    cyan    = { gui = '#6097a4', cterm = '72' },
-    magenta = { gui = '#8b6e85', cterm = '132' },
-    green   = { gui = '#7e956a', cterm = '65' },
-    yellow  = { gui = '#a58a6c', cterm = '101' },
-    red     = { gui = '#9e4b52', cterm = '131' },
+    gray    = { gui = '#acacac', cterm = '253' },
+    blue    = { gui = '#3b699f', cterm = '68' },
+    cyan    = { gui = '#3f8e9d', cterm = '73' },
+    magenta = { gui = '#8c5475', cterm = '132' },
+    green   = { gui = '#5d8a48', cterm = '65' },
+    yellow  = { gui = '#b88749', cterm = '136' },
+    red     = { gui = '#a84147', cterm = '124' },
 
     bg10    = { gui = '#eeeeee', cterm = '255' },
     bg20    = { gui = '#e0e0e0', cterm = '254' },
     bg30    = { gui = '#d3d3d3', cterm = '253' },
 
-    fg10    = { gui = '#191C24', cterm = '233' },
+    fg30    = { gui = '#191C24', cterm = '233' },
     fg20    = { gui = '#2e3440', cterm = '235' },
-    fg30    = { gui = '#3b4252', cterm = '237' },
+    fg10    = { gui = '#3b4252', cterm = '237' },
 }
 
-M.colors = M.light
 
 M.termcolors = {
-    black = { normal = M.colors.gray.gui, bright = '#4c566a' },
-    red = { normal = M.colors.red.gui, bright = '#d06f79' },
-    green = { normal = M.colors.green.gui, bright = '#b3cf9d' },
-    yellow = { normal = M.colors.yellow.gui, bright = '#e0c4a8' },
-    blue = { normal = M.colors.blue.gui, bright = '#8fadc8' },
-    magenta = { normal = M.colors.magenta.gui, bright = '#c895b5' },
-    cyan = { normal = M.colors.cyan.gui, bright = '#9fceda' },
-    white = { normal = '#e5e9f0', bright = '#edeff4' },
+    black = { normal = M.dark.gray.gui, bright = M.light.gray.gui },
+    red = { normal = M.dark.red.gui, bright = M.light.red.gui },
+    green = { normal = M.dark.green.gui, bright = M.light.green.gui },
+    yellow = { normal = M.dark.yellow.gui, bright = M.light.yellow.gui },
+    blue = { normal = M.dark.blue.gui, bright = M.light.blue.gui },
+    magenta = { normal = M.dark.magenta.gui, bright = M.light.magenta.gui },
+    cyan = { normal = M.dark.cyan.gui, bright = M.light.cyan.gui },
+    white = { normal = M.dark.fg10, bright = M.light.bg30.gui },
 }
 
 return M
