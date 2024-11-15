@@ -49,7 +49,6 @@ local function setHighlights()
     hi('IncSearch', { bg = c.fg10, fg = c.bg_primary })
     hi('Search', { bg = c.bg_primary, fg = c.fg10 })
     hi('Folded', { bg = c.bg_primary, fg = c.fg10 })
-    hi('Special', { fg = c.fg10 })
     hi('Title', { fg = c.magenta, style = 'bold' })
     hi('Todo', { style = 'inverse,bold' })
     hi('Directory', { fg = c.blue, style = 'underline' })
@@ -77,22 +76,27 @@ local function setHighlights()
 
     -- Constants & Primitives
     hi('Constant', { fg = c.yellow })
-    hi('Number', { fg = c.yellow })
-    hi('Float', { fg = c.yellow })
-    hi('Boolean', { fg = c.yellow })
-    hi('Character', { fg = c.yellow })
     hi('Label', { fg = c.yellow })
+    hi('Type', { fg = c.yellow })
+
+    -- scalar
+    hi('Number', { fg = c.cyan })
+    hi('Float', { fg = c.cyan })
+    hi('Boolean', { fg = c.cyan })
+
+    -- function and methods
+    hi('Function', { fg = c.blue })
 
     -- Types
-    hi('Function', { fg = c.blue })
-    hi('Type', { fg = c.green })
     hi('Identifier', { fg = c.green })
-    hi('@Variable', { fg = c.green })
+    hi('@variable', { fg = c.green })
     hi('StorageClass', { fg = c.green, style = 'bold' })
 
     -- Strings
-    hi('String', { fg = c.fg30 })
-    hi('Delimiter', { fg = c.fg30 })
+    hi('String', { fg = c.fg10 })
+    hi('Character', { fg = c.fg10 })
+    hi('Delimiter', { fg = c.fg10 })
+    hi('Special', { fg = c.fg10 })
 
     -- Diff
     hi('DiffAdd', { fg = c.green })
