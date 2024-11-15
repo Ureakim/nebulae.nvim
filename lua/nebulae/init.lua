@@ -144,6 +144,17 @@ local function setHighlights()
     hi('MiniPickPreviewLine', { bg = c.bg_alt, fg = c.fg10 })
     hi('MiniPickPreviewRegion', { bg = c.bg_alt, fg = c.fg10 })
     hi('MiniPickPrompt', { bg = c.bg_alt, fg = c.fg10 })
+    -- mini.statusline
+    hi('MiniStatuslineDevinfo', { bg = c.bg_alt, fg = c.fg30 })
+    hi('MiniStatuslineFileinfo', { bg = c.bg_alt, fg = c.fg30 })
+    hi('MiniStatuslineFilename', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniStatuslineModeNormal', { bg = c.bg_accent, fg = c.fg30 })
+    hi('MiniStatuslineModeInsert', { bg = c.bg_accent, fg = c.green })
+    hi('MiniStatuslineModeVisual', { bg = c.bg_accent, fg = c.blue })
+    hi('MiniStatuslineModeReplace', { bg = c.bg_accent, fg = c.yellow })
+    hi('MiniStatuslineModeCommand', { bg = c.bg_accent, fg = c.magenta })
+    hi('MiniStatuslineModeOther', { bg = c.bg_accent, fg = c.cyan })
+    hi('MiniStatuslineDisabled', { bg = c.bg, fg = c.gray })
 
     -- CMP
     hi('CmpItemAbbrDeprecated', { fg = c.yellow })
