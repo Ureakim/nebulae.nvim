@@ -6,37 +6,37 @@ local M = {}
 M.dark = {
     none       = { gui = 'NONE', cterm = 'NONE' },
 
-    gray       = { gui = '#757575', cterm = '237' },
-    blue       = { gui = '#81a1c1', cterm = '110' },
-    cyan       = { gui = '#88c0d0', cterm = '73' },
-    magenta    = { gui = '#b48ead', cterm = '139' },
-    green      = { gui = '#a3be8c', cterm = '108' },
-    yellow     = { gui = '#d2b48c', cterm = '180' },
-    red        = { gui = '#bf616a', cterm = '168' },
+    gray       = { gui = '#757575', cterm = 'NONE' },
+    blue       = { gui = '#81a1c1', cterm = 'NONE' },
+    cyan       = { gui = '#88c0d0', cterm = 'NONE' },
+    magenta    = { gui = '#b48ead', cterm = 'NONE' },
+    green      = { gui = '#a3be8c', cterm = 'NONE' },
+    yellow     = { gui = '#ebcb8b', cterm = 'NONE' },
+    red        = { gui = '#bf616a', cterm = 'NONE' },
 
     bg_primary = { gui = '#2e3440', cterm = '235' },
     bg_alt     = { gui = '#191C24', cterm = '233' },
     bg_accent  = { gui = '#434c5e', cterm = '237' },
 
-    fg10       = { gui = '#eff1f5', cterm = '255' },
-    fg20       = { gui = '#dcdfe4', cterm = '254' },
-    fg30       = { gui = '#ccd0dA', cterm = '252' },
+    fg10       = { gui = '#fcfcfc', cterm = '255' },
+    fg20       = { gui = '#e8e8e8', cterm = '254' },
+    fg30       = { gui = '#d4d4d4', cterm = '252' },
 }
 
 M.light = {
     none       = { gui = 'NONE', cterm = 'NONE' },
 
-    gray       = { gui = '#acacac', cterm = '253' },
-    blue       = { gui = '#3b699f', cterm = '68' },
-    cyan       = { gui = '#3f8e9d', cterm = '73' },
-    magenta    = { gui = '#8c5475', cterm = '132' },
-    green      = { gui = '#5d8a48', cterm = '65' },
-    yellow     = { gui = '#b88749', cterm = '136' },
-    red        = { gui = '#a84147', cterm = '124' },
+    gray       = { gui = '#6e6e6e', cterm = 'NONE' },
+    blue       = { gui = '#007acc', cterm = 'NONE' },
+    cyan       = { gui = '#1aa893', cterm = 'NONE' },
+    magenta    = { gui = '#d33682', cterm = 'NONE' },
+    green      = { gui = '#6b8900', cterm = 'NONE' },
+    yellow     = { gui = '#b58900', cterm = 'NONE' },
+    red        = { gui = '#dc322f', cterm = 'NONE' },
 
-    bg_primary = { gui = '#eff1f5', cterm = '255' },
-    bg_alt     = { gui = '#ccd0dA', cterm = '254' },
-    bg_accent  = { gui = '#dcdfe4', cterm = '253' },
+    bg_primary = { gui = '#fcfcfc', cterm = '255' },
+    bg_alt     = { gui = '#e8e8e8', cterm = '254' },
+    bg_accent  = { gui = '#d4d4d4', cterm = '253' },
 
     fg10       = { gui = '#434c5e', cterm = '237' },
     fg20       = { gui = '#2e3440', cterm = '235' },

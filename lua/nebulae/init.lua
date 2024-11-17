@@ -60,43 +60,43 @@ local function setHighlights()
     hi('SpellBad', { fg = c.yellow, style = 'undercurl' })
     hi('Error', { fg = c.red, style = 'underline' })
 
+    -- Strings
+    hi('Delimiter', { fg = c.fg10 })
+    hi('String', { fg = c.fg10 })
+    hi('Character', { fg = c.fg10 })
+
     -- Comments
     hi('Comment', { fg = c.gray, style = 'italic' })
     hi('Whitespace', { fg = c.gray, style = 'NONE' })
     hi('NonText', { fg = c.gray, style = 'NONE' })
 
-    -- Keywords
-    hi('Conditional', { fg = c.magenta })
-    hi('Define', { fg = c.magenta })
+    -- Program Flow
     hi('Keyword', { fg = c.magenta, style = 'bold' })
     hi('Operator', { fg = c.magenta })
-    hi('PreProc', { fg = c.magenta })
     hi('Statement', { fg = c.magenta })
+    hi('Conditional', { fg = c.magenta })
     hi('Tag', { fg = c.magenta })
 
-    -- Constants & Primitives
-    hi('Constant', { fg = c.yellow })
-    hi('Label', { fg = c.yellow })
-    hi('Type', { fg = c.yellow })
-
-    -- scalar
-    hi('Number', { fg = c.cyan })
-    hi('Float', { fg = c.cyan })
-    hi('Boolean', { fg = c.cyan })
-
-    -- function and methods
+    -- Functions & Functionnalities
     hi('Function', { fg = c.blue })
+    hi('Identifier', { fg = c.blue })
+    hi('PreProc', { fg = c.blue })
+    hi('Type', { fg = c.blue })
+    hi('StorageClass', { fg = c.blue, style = 'bold' })
+    hi('Define', { fg = c.blue })
 
-    -- Types
-    hi('Identifier', { fg = c.green })
+    -- Constants
+    hi('Label', { fg = c.cyan })
+    hi('Boolean', { fg = c.cyan })
+    hi('Constant', { fg = c.cyan })
+    hi('Special', { fg = c.cyan })
+
+    -- Data
     hi('@variable', { fg = c.green })
-    hi('StorageClass', { fg = c.green, style = 'bold' })
 
-    -- Strings
-    hi('String', { fg = c.fg10 })
-    hi('Character', { fg = c.fg10 })
-    hi('Delimiter', { fg = c.fg10 })
-    hi('Special', { fg = c.fg10 })
+    -- Scalars
+    hi('Number', { fg = c.yellow })
+    hi('Float', { fg = c.yellow })
 
     -- Diff
     hi('DiffAdd', { fg = c.green })
@@ -158,38 +158,7 @@ local function setHighlights()
     hi('MiniStatuslineModeReplace', { bg = c.bg_accent, fg = c.yellow })
     hi('MiniStatuslineModeCommand', { bg = c.bg_accent, fg = c.magenta })
     hi('MiniStatuslineModeOther', { bg = c.bg_accent, fg = c.cyan })
-    hi('MiniStatuslineDisabled', { bg = c.bg, fg = c.gray })
-
-    -- CMP
-    hi('CmpItemAbbrDeprecated', { fg = c.yellow })
-    hi('CmpItemAbbrMatch', { bg = c.bg_primary, fg = c.fg10 })
-    hi('CmpItemAbbrMatchFuzzy', { bg = c.bg_primary, fg = c.fg10 })
-    hi('CmpItemMenu', { fg = c.bg_primary })
-
-    hi('CmpItemKindKeyword', { fg = c.magenta })
-    hi('CmpItemKindVariable', { fg = c.magenta })
-    hi('CmpItemKindOperator', { fg = c.magenta })
-    hi('CmpItemKindModule', { fg = c.magenta })
-    hi('CmpItemKindEnumMember', { fg = c.magenta })
-
-    hi('CmpItemKindClass', { fg = c.green })
-    hi('CmpItemKindStruct', { fg = c.green })
-    hi('CmpItemKindInterface', { fg = c.green })
-    hi('CmpItemKindEnum', { fg = c.green })
-
-    hi('CmpItemKindFunction', { fg = c.blue })
-    hi('CmpItemKindMethod', { fg = c.blue })
-    hi('CmpItemKindConstructor', { fg = c.blue })
-    hi('CmpItemKindReference', { fg = c.blue })
-
-    hi('CmpItemKindProperty', { fg = c.magenta })
-    hi('CmpItemKindField', { fg = c.magenta })
-    hi('CmpItemKindEvent', { fg = c.magenta })
-    hi('CmpItemKindConstant', { fg = c.magenta })
-    hi('CmpItemKindValue', { fg = c.magenta })
-
-    hi('CmpItemKindText', { fg = c.fg30 })
-    hi('CmpItemKindUnit', { fg = c.fg30 })
+    hi('MiniStatuslineDisabled', { bg = c.bg_accent, fg = c.fg30 })
 end
 
 M.setup = function()
