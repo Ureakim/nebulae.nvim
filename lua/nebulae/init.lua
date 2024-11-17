@@ -1,11 +1,6 @@
+local M = {}
 local palette = require('nebulae.palette')
-
-vim.g.colors_name = 'nebulae'
-
-vim.cmd('highlight clear')
-vim.cmd('set t_Co=256')
-
-local c = palette.colors
+local c = palette.dark
 local t = palette.termcolors
 
 local function hi(group, format)
@@ -34,146 +29,153 @@ local function hi(group, format)
     vim.cmd(s)
 end
 
--- UI
-hi('Normal', { bg = c.black20, fg = c.white10 })
-hi('NormalFloat', { bg = c.black10, fg = c.white10 })
-hi('Visual', { bg = c.black50, fg = c.white10 })
-hi('Cursor', { bg = c.white10, fg = c.black30 })
-hi('CursorLine', { bg = c.black10 })
-hi('CursorColumn', { bg = c.black10 })
-hi('CursorLineNr', { bg = c.black10, fg = c.white10 })
-hi('MatchParen', { bg = c.white10, fg = c.black30, style = 'reverse' })
-hi('ColorColumn', { bg = c.black30, fg = c.white10 })
-hi('LineNr', { bg = c.black20, fg = c.black60 })
-hi('SignColumn', { bg = c.black20, fg = c.white10 })
-hi('VertSplit', { bg = c.black10, fg = c.white10 })
-hi('StatusLine', { bg = c.black10, fg = c.white10 })
-hi('Pmenu', { bg = c.black10, fg = c.white10 })
-hi('PmenuSel', { bg = c.black40, fg = c.white10 })
-hi('IncSearch', { bg = c.white10, fg = c.black50 })
-hi('Search', { bg = c.black50, fg = c.white10 })
-hi('Folded', { bg = c.black50, fg = c.white10 })
-hi('Special', { fg = c.white10 })
-hi('Title', { fg = c.magenta, style = 'bold' })
-hi('Todo', { style = 'inverse,bold' })
-hi('Directory', { fg = c.blue, style = 'underline' })
-hi('SpecialKey', { bg = c.black50, fg = c.black10 })
-hi('ErrorMsg', { bg = c.black50, fg = c.red, style = 'bold' })
-hi('WarningMsg', { fg = c.yellow })
-hi('Underlined', { style = 'underline' })
-hi('SpellCap', { fg = c.green, style = 'underline' })
-hi('SpellBad', { fg = c.yellow, style = 'underline' })
-hi('Error', { fg = c.red, style = 'underline' })
+local function setHighlights()
+    -- UI
+    hi('Normal', { bg = c.bg_primary, fg = c.fg10 })
+    hi('NormalFloat', { bg = c.bg_alt, fg = c.fg10 })
+    hi('Visual', { bg = c.bg_accent, style = 'italic' })
+    hi('Cursor', { bg = c.fg10, fg = c.bg_primary })
+    hi('CursorLine', { bg = c.bg_alt })
+    hi('CursorColumn', { bg = c.bg_alt })
+    hi('CursorLineNr', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MatchParen', { bg = c.fg10, fg = c.bg_primary, style = 'reverse' })
+    hi('ColorColumn', { bg = c.bg_accent, fg = c.fg10 })
+    hi('LineNr', { bg = c.bg_primary, fg = c.gray })
+    hi('SignColumn', { bg = c.bg_primary, fg = c.fg10 })
+    hi('VertSplit', { bg = c.bg_alt, fg = c.fg10 })
+    hi('StatusLine', { bg = c.bg_alt, fg = c.fg10 })
+    hi('Pmenu', { bg = c.bg_alt, fg = c.fg10 })
+    hi('PmenuSel', { bg = c.bg_accent, fg = c.fg10 })
+    hi('IncSearch', { bg = c.fg10, fg = c.bg_primary })
+    hi('Search', { bg = c.bg_primary, fg = c.fg10 })
+    hi('Folded', { bg = c.bg_primary, fg = c.fg10 })
+    hi('Title', { fg = c.magenta, style = 'bold' })
+    hi('Todo', { style = 'inverse,bold' })
+    hi('Directory', { fg = c.blue, style = 'underline' })
+    hi('SpecialKey', { bg = c.bg_primary, fg = c.bg_alt })
+    hi('ErrorMsg', { bg = c.bg_primary, fg = c.red, style = 'bold' })
+    hi('WarningMsg', { fg = c.yellow })
+    hi('Underlined', { style = 'underline' })
+    hi('SpellCap', { fg = c.green, style = 'undercurl' })
+    hi('SpellBad', { fg = c.yellow, style = 'undercurl' })
+    hi('Error', { fg = c.red, style = 'underline' })
 
--- Comments
-hi('Comment', { fg = c.black60, style = 'italic' })
-hi('Whitespace', { fg = c.black60, style = 'NONE' })
-hi('NonText', { fg = c.black60, style = 'NONE' })
+    -- Strings
+    hi('Delimiter', { fg = c.fg10 })
+    hi('String', { fg = c.fg10 })
+    hi('Character', { fg = c.fg10 })
 
--- Keywords
-hi('Conditional', { fg = c.magenta })
-hi('Define', { fg = c.magenta })
-hi('Keyword', { fg = c.magenta, style = 'bold' })
-hi('Operator', { fg = c.magenta })
-hi('PreProc', { fg = c.magenta })
-hi('Statement', { fg = c.magenta })
-hi('Tag', { fg = c.magenta })
+    -- Comments
+    hi('Comment', { fg = c.gray, style = 'italic' })
+    hi('Whitespace', { fg = c.gray, style = 'NONE' })
+    hi('NonText', { fg = c.gray, style = 'NONE' })
 
--- Constants & Primitives
-hi('Constant', { fg = c.yellow })
-hi('Number', { fg = c.yellow })
-hi('Float', { fg = c.yellow })
-hi('Boolean', { fg = c.yellow })
-hi('Character', { fg = c.yellow })
-hi('Label', { fg = c.yellow })
+    -- Program Flow
+    hi('Keyword', { fg = c.magenta, style = 'bold' })
+    hi('Operator', { fg = c.magenta })
+    hi('Statement', { fg = c.magenta })
+    hi('Conditional', { fg = c.magenta })
+    hi('Tag', { fg = c.magenta })
 
--- Types
-hi('Function', { fg = c.blue })
-hi('Type', { fg = c.green })
-hi('Identifier', { fg = c.green })
-hi('StorageClass', { fg = c.green, style = 'bold' })
+    -- Functions & Functionnalities
+    hi('Function', { fg = c.blue })
+    hi('Identifier', { fg = c.blue })
+    hi('PreProc', { fg = c.blue })
+    hi('Type', { fg = c.blue })
+    hi('StorageClass', { fg = c.blue, style = 'bold' })
+    hi('Define', { fg = c.blue })
 
--- Strings
-hi('String', { fg = c.white30 })
+    -- Constants
+    hi('Label', { fg = c.cyan })
+    hi('Boolean', { fg = c.cyan })
+    hi('Constant', { fg = c.cyan })
+    hi('Special', { fg = c.cyan })
 
--- Diff
-hi('DiffAdd', { fg = c.green })
-hi('DiffDelete', { fg = c.red })
-hi('DiffChange', { fg = c.blue })
-hi('DiffText', { bg = c.yellow, fg = c.black10 })
+    -- Data
+    hi('@variable', { fg = c.green })
 
--- Terminal
-vim.g.terminal_color_0 = t.black.normal
-vim.g.terminal_color_1 = t.red.normal
-vim.g.terminal_color_2 = t.green.normal
-vim.g.terminal_color_3 = t.yellow.normal
-vim.g.terminal_color_4 = t.blue.normal
-vim.g.terminal_color_5 = t.magenta.normal
-vim.g.terminal_color_6 = t.cyan.normal
-vim.g.terminal_color_7 = t.white.normal
-vim.g.terminal_color_8 = t.black.bright
-vim.g.terminal_color_9 = t.red.bright
-vim.g.terminal_color_10 = t.green.bright
-vim.g.terminal_color_11 = t.yellow.bright
-vim.g.terminal_color_12 = t.blue.bright
-vim.g.terminal_color_13 = t.magenta.bright
-vim.g.terminal_color_14 = t.cyan.bright
-vim.g.terminal_color_15 = t.white.bright
+    -- Scalars
+    hi('Number', { fg = c.yellow })
+    hi('Float', { fg = c.yellow })
 
---
--- mini.nvim
---
--- mini.files
-hi('MiniFilesBorder', { bg = c.black10, fg = c.white10 })
-hi('MiniFilesBorderModified', { bg = c.black10, fg = c.red })
-hi('MiniFilesCursorLine', { bg = c.black40, fg = c.white10 })
-hi('MiniFilesDirectory', { bg = c.black10, fg = c.blue })
-hi('MiniFilesFile', { bg = c.black10, fg = c.white10 })
-hi('MiniFilesNormal', { bg = c.black10, fg = c.white10 })
-hi('MiniFilesTitle', { bg = c.black10, fg = c.green })
--- mini.pick
-hi('MiniPickBorder', { bg = c.black10, fg = c.white10 })
-hi('MiniPickBorderBusy', { bg = c.black10, fg = c.red })
-hi('MiniPickBorderText', { bg = c.black10, fg = c.white10 })
-hi('MiniPickCursor', { bg = c.white10, fg = c.black30 })
-hi('MiniPickIconDirectory', { bg = c.black10, fg = c.white10 })
-hi('MiniPickIconFile', { bg = c.black10, fg = c.white10 })
-hi('MiniPickHeader', { bg = c.black10, fg = c.green })
-hi('MiniPickMatchCurrent', { bg = c.black40, fg = c.white10 })
-hi('MiniPickMatchMarked', { bg = c.black10, fg = c.green })
-hi('MiniPickMatchRanges', { bg = c.black10, fg = c.green })
-hi('MiniPickNormal', { bg = c.black10, fg = c.white10 })
-hi('MiniPickPreviewLine', { bg = c.black10, fg = c.white10 })
-hi('MiniPickPreviewRegion', { bg = c.black10, fg = c.white10 })
-hi('MiniPickPrompt', { bg = c.black10, fg = c.white10 })
+    -- Diff
+    hi('DiffAdd', { fg = c.green })
+    hi('DiffDelete', { fg = c.red })
+    hi('DiffChange', { fg = c.blue })
+    hi('DiffText', { bg = c.yellow, fg = c.bg_alt })
 
--- CMP
-hi('CmpItemAbbrDeprecated', { fg = c.yellow })
-hi('CmpItemAbbrMatch', { bg = c.black50, fg = c.white10 })
-hi('CmpItemAbbrMatchFuzzy', { bg = c.black50, fg = c.white10 })
-hi('CmpItemMenu', { fg = c.black60 })
+    -- Terminal
+    vim.g.terminal_color_0 = t.black.normal
+    vim.g.terminal_color_1 = t.red.normal
+    vim.g.terminal_color_2 = t.green.normal
+    vim.g.terminal_color_3 = t.yellow.normal
+    vim.g.terminal_color_4 = t.blue.normal
+    vim.g.terminal_color_5 = t.magenta.normal
+    vim.g.terminal_color_6 = t.cyan.normal
+    vim.g.terminal_color_7 = t.white.normal
+    vim.g.terminal_color_8 = t.black.bright
+    vim.g.terminal_color_9 = t.red.bright
+    vim.g.terminal_color_10 = t.green.bright
+    vim.g.terminal_color_11 = t.yellow.bright
+    vim.g.terminal_color_12 = t.blue.bright
+    vim.g.terminal_color_13 = t.magenta.bright
+    vim.g.terminal_color_14 = t.cyan.bright
+    vim.g.terminal_color_15 = t.white.bright
 
-hi('CmpItemKindKeyword', { fg = c.magenta })
-hi('CmpItemKindVariable', { fg = c.magenta })
-hi('CmpItemKindOperator', { fg = c.magenta })
-hi('CmpItemKindModule', { fg = c.magenta })
-hi('CmpItemKindEnumMember', { fg = c.magenta })
+    --
+    -- mini.nvim
+    --
+    -- mini.files
+    hi('MiniFilesBorder', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniFilesBorderModified', { bg = c.bg_alt, fg = c.red })
+    hi('MiniFilesCursorLine', { bg = c.bg_accent, fg = c.fg10 })
+    hi('MiniFilesDirectory', { bg = c.bg_alt, fg = c.blue })
+    hi('MiniFilesFile', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniFilesNormal', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniFilesTitle', { bg = c.bg_alt, fg = c.green })
+    -- mini.pick
+    hi('MiniPickBorder', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniPickBorderBusy', { bg = c.bg_alt, fg = c.red })
+    hi('MiniPickBorderText', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniPickCursor', { bg = c.fg10, fg = c.bg_primary })
+    hi('MiniPickIconDirectory', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniPickIconFile', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniPickHeader', { bg = c.bg_alt, fg = c.green })
+    hi('MiniPickMatchCurrent', { bg = c.bg_accent, fg = c.fg10 })
+    hi('MiniPickMatchMarked', { bg = c.bg_alt, fg = c.green })
+    hi('MiniPickMatchRanges', { bg = c.bg_alt, fg = c.green })
+    hi('MiniPickNormal', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniPickPreviewLine', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniPickPreviewRegion', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniPickPrompt', { bg = c.bg_alt, fg = c.fg10 })
+    -- mini.statusline
+    hi('MiniStatuslineDevinfo', { bg = c.bg_alt, fg = c.fg30 })
+    hi('MiniStatuslineFileinfo', { bg = c.bg_alt, fg = c.fg30 })
+    hi('MiniStatuslineFilename', { bg = c.bg_alt, fg = c.fg10 })
+    hi('MiniStatuslineModeNormal', { bg = c.bg_accent, fg = c.fg30 })
+    hi('MiniStatuslineModeInsert', { bg = c.bg_accent, fg = c.green })
+    hi('MiniStatuslineModeVisual', { bg = c.bg_accent, fg = c.blue })
+    hi('MiniStatuslineModeReplace', { bg = c.bg_accent, fg = c.yellow })
+    hi('MiniStatuslineModeCommand', { bg = c.bg_accent, fg = c.magenta })
+    hi('MiniStatuslineModeOther', { bg = c.bg_accent, fg = c.cyan })
+    hi('MiniStatuslineDisabled', { bg = c.bg_accent, fg = c.fg30 })
+end
 
-hi('CmpItemKindClass', { fg = c.green })
-hi('CmpItemKindStruct', { fg = c.green })
-hi('CmpItemKindInterface', { fg = c.green })
-hi('CmpItemKindEnum', { fg = c.green })
+M.setup = function()
+    vim.api.nvim_command("hi clear")
+    if vim.fn.exists("syntax_on") then
+        vim.api.nvim_command("syntax reset")
+    end
 
-hi('CmpItemKindFunction', { fg = c.blue })
-hi('CmpItemKindMethod', { fg = c.blue })
-hi('CmpItemKindConstructor', { fg = c.blue })
-hi('CmpItemKindReference', { fg = c.blue })
+    vim.g.colors_name = 'nebulae'
 
-hi('CmpItemKindProperty', { fg = c.magenta })
-hi('CmpItemKindField', { fg = c.magenta })
-hi('CmpItemKindEvent', { fg = c.magenta })
-hi('CmpItemKindConstant', { fg = c.magenta })
-hi('CmpItemKindValue', { fg = c.magenta })
+    if vim.o.background == "light" then
+        c = palette.light
+    else
+        c = palette.dark
+    end
 
-hi('CmpItemKindText', { fg = c.white30 })
-hi('CmpItemKindUnit', { fg = c.white30 })
+    setHighlights()
+end
+
+return M
