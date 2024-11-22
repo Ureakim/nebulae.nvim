@@ -6,7 +6,7 @@ local M = {}
 M.dark = {
     none       = { gui = 'NONE', cterm = 'NONE' },
 
-    gray       = { gui = '#757575', cterm = 'NONE' },
+    gray       = { gui = '#636d83', cterm = 'NONE' },
     blue       = { gui = '#81a1c1', cterm = 'NONE' },
     cyan       = { gui = '#88c0d0', cterm = 'NONE' },
     magenta    = { gui = '#b48ead', cterm = 'NONE' },
@@ -26,7 +26,7 @@ M.dark = {
 M.light = {
     none       = { gui = 'NONE', cterm = 'NONE' },
 
-    gray       = { gui = '#6e6e6e', cterm = 'NONE' },
+    gray       = { gui = '#a3acb9', cterm = 'NONE' },
     blue       = { gui = '#007acc', cterm = 'NONE' },
     cyan       = { gui = '#1aa893', cterm = 'NONE' },
     magenta    = { gui = '#d33682', cterm = 'NONE' },
