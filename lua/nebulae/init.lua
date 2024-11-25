@@ -86,17 +86,17 @@ local function setHighlights()
     hi('Define', { fg = c.blue })
 
     -- Constants
-    hi('Label', { fg = c.cyan })
-    hi('Boolean', { fg = c.cyan })
-    hi('Constant', { fg = c.cyan })
-    hi('Special', { fg = c.cyan })
+    hi('Label', { fg = c.yellow })
+    hi('Boolean', { fg = c.yellow })
+    hi('Constant', { fg = c.yellow })
+    hi('Special', { fg = c.yellow })
 
     -- Data
     hi('@variable', { fg = c.green })
 
     -- Scalars
-    hi('Number', { fg = c.yellow })
-    hi('Float', { fg = c.yellow })
+    hi('Number', { fg = c.cyan })
+    hi('Float', { fg = c.cyan })
 
     -- Diff
     hi('DiffAdd', { fg = c.green })
