@@ -159,6 +159,9 @@ local function setHighlights()
     hi('MiniStatuslineModeCommand', { bg = c.bg_accent, fg = c.magenta })
     hi('MiniStatuslineModeOther', { bg = c.bg_accent, fg = c.cyan })
     hi('MiniStatuslineDisabled', { bg = c.bg_accent, fg = c.fg30 })
+    -- mini.indentscope
+    hi('MiniIndentscopeSymbol', { fg = c.gray })
+    hi('MiniIndentscopeSymbolOff', { fg = c.yellow })
 end
 
 M.setup = function()
