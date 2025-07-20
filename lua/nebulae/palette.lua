@@ -2,45 +2,47 @@ local M = {}
 
 --[[
 -- 256 Colors cheat sheet
+-- Based on the Everforest theme
 --]]
+
 M.dark = {
     none       = { gui = 'NONE', cterm = 'NONE' },
 
-    gray       = { gui = '#636d83', cterm = 'NONE' },
-    blue       = { gui = '#81a1c1', cterm = 'NONE' },
-    cyan       = { gui = '#88c0d0', cterm = 'NONE' },
-    magenta    = { gui = '#b48ead', cterm = 'NONE' },
-    green      = { gui = '#a3be8c', cterm = 'NONE' },
-    yellow     = { gui = '#ebcb8b', cterm = 'NONE' },
-    red        = { gui = '#bf616a', cterm = 'NONE' },
+    gray       = { gui = '#7A8478', cterm = 'NONE' },
+    blue       = { gui = '#7FBBB3', cterm = 'NONE' },
+    cyan       = { gui = '#83C092', cterm = 'NONE' },
+    magenta    = { gui = '#d699B6', cterm = 'NONE' },
+    green      = { gui = '#A7C080', cterm = 'NONE' },
+    yellow     = { gui = '#DBBC7F', cterm = 'NONE' },
+    red        = { gui = '#E67E80', cterm = 'NONE' },
 
-    bg_primary = { gui = '#2e3440', cterm = '235' },
-    bg_alt     = { gui = '#191C24', cterm = '233' },
-    bg_accent  = { gui = '#434c5e', cterm = '237' },
+    bg_primary = { gui = '#333C43', cterm = '235' },
+    bg_alt     = { gui = '#293136', cterm = '233' },
+    bg_accent  = { gui = '#4D5960', cterm = '237' },
 
-    fg10       = { gui = '#fcfcfc', cterm = '255' },
-    fg20       = { gui = '#e8e8e8', cterm = '254' },
-    fg30       = { gui = '#d4d4d4', cterm = '252' },
+    fg10       = { gui = '#d3c6aa', cterm = '255' },
+    fg20       = { gui = '#c8b89a', cterm = '254' },
+    fg30       = { gui = '#bcab8a', cterm = '252' },
 }
 
 M.light = {
     none       = { gui = 'NONE', cterm = 'NONE' },
 
-    gray       = { gui = '#a3acb9', cterm = 'NONE' },
-    blue       = { gui = '#007acc', cterm = 'NONE' },
-    cyan       = { gui = '#1aa893', cterm = 'NONE' },
-    magenta    = { gui = '#d33682', cterm = 'NONE' },
-    green      = { gui = '#6b8900', cterm = 'NONE' },
-    yellow     = { gui = '#b58900', cterm = 'NONE' },
-    red        = { gui = '#dc322f', cterm = 'NONE' },
+    gray       = { gui = '#A6B0A0', cterm = 'NONE' },
+    blue       = { gui = '#3A94C5', cterm = 'NONE' },
+    cyan       = { gui = '#35A77C', cterm = 'NONE' },
+    magenta    = { gui = '#DF69BA', cterm = 'NONE' },
+    green      = { gui = '#8DA101', cterm = 'NONE' },
+    yellow     = { gui = '#DFA000', cterm = 'NONE' },
+    red        = { gui = '#F85552', cterm = 'NONE' },
 
-    bg_primary = { gui = '#fcfcfc', cterm = '255' },
-    bg_alt     = { gui = '#e8e8e8', cterm = '254' },
-    bg_accent  = { gui = '#d4d4d4', cterm = '253' },
+    fg10       = { gui = '#5c6A72', cterm = '233' },
+    fg20       = { gui = '#6b7a82', cterm = '235' },
+    fg30       = { gui = '#7c8b94', cterm = '237' },
 
-    fg10       = { gui = '#434c5e', cterm = '237' },
-    fg20       = { gui = '#2e3440', cterm = '235' },
-    fg30       = { gui = '#191C24', cterm = '233' },
+    bg_primary = { gui = '#FDF6E3', cterm = '255' },
+    bg_alt     = { gui = '#EFEBD4', cterm = '252' },
+    bg_accent  = { gui = '#E6E2CC', cterm = '254' },
 }
 
 
